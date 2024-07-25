@@ -4,14 +4,20 @@ public class CarMain {
 
     public static void main(String[] args) {
         Driver driver = new Driver();
-        K3Car k3Car = new K3Car();
 
-        driver.setK3Car(k3Car);
+        //차량 선택
+        K3Car k3Car = new K3Car();
+        driver.setCar(k3Car);
         driver.drive();
 
+        //차량 변경
         Model3Car model3Car = new Model3Car();
-        driver.setK3Car(null);
-        driver.setModel3Car(model3Car);
+        driver.setCar(model3Car);
+        driver.drive();
+
+        //차량 추가 + 변경
+        NewCar newCar = new NewCar();
+        driver.setCar(model3Car);
         driver.drive();
     }
 }
